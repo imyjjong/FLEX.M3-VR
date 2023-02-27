@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VRPlayground</title>
+    <script src="js/aframe.min.js"></script>
+    <script defer src="js/script.js"></script>
+</head>
+<body>
+    <a-scene stats>
+        <a-sky src="img/space.webp"></a-sky>
+        <a-camera>
+            <a-cursor color="white"></a-cursor>
+        </a-camera>
+        <a-box position="0 4 -20" color="red"></a-box>
+        <a-box animation="property:position; pauseEvents:mouseenter; resumeEvents:mouseleave; dir:alternate; to:-5 -4 0; dur:8000; loop:true;" position="-5 4 0" color="red"></a-box>
+        <a-box id="js--sound" animation="property:rotation; to:0 360 0; resumeEvents:mouseenter; autoplay:false; dur:5000; easing:linear; loop:true;" src="img/togrowoldinv.webp" position="3 2 -4">
+            <a-sound src="sounds/WandaVision_Intro.mp3"></a-sound>
+        </a-box>
+
+        <a-sphere position="0 10 0" radius="1" src="img/mars.webp"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:-3 5 -8; dur:8000; loop:true;" position="-3 4 -8" src="img/pluto.webp"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:-2 8 -8; dur:8000; loop:true;" position="-3 8 -8" radius="2" src="img/venus.webp"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:11 1 -8; dur:8000; loop:true;" position="12 0 -8" radius="1.5" src="img/mercury.webp.png"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:-11 1 2; dur:8000; loop:true;" position="-12 0 2" radius="3" src="img/jupiter.png"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:1 1 2; dur:8000; loop:true;" position="2 1 2" radius="3" src="img/earth.png"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:-9 5 -8; dur:8000; loop:true;" position="-9 4 -8" src="img/moon.png"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:20 5 -8; dur:8000; loop:true;" position="20 4 -8" src="img/saturn.png"></a-sphere>
+        <a-ring animation="property:position; resumeEvents:mouseleave; dir:alternate; to:20 5 -8; dur:8000; loop:true;" position="20 4 -8" src="img/saturn.png"></a-ring>
+        <a-ring animation="property:position; resumeEvents:mouseleave; dir:alternate; to:20 5 -7.9; dur:8000; loop:true;" position="20 4 -7.9" src="img/saturn.png"></a-ring>
+        <a-ring animation="property:position; resumeEvents:mouseleave; dir:alternate; to:20 5 -8.1; dur:8000; loop:true;" position="20 4 -8.1" src="img/saturn.png"></a-ring>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:9 5 -8; dur:8000; loop:true;" position="9 4 -8" src="img/uranus.png"></a-sphere>
+        <a-sphere animation="property:position; resumeEvents:mouseleave; dir:alternate; to:2 7 -8; dur:8000; loop:true;" position="2 6 -8" src="img/neptune.png"></a-sphere>
+
+        <a-plane rotation="-90 0 0" position="-3 -2 -8"  color="#a70000" width="30" height="30"></a-plane>
+    </a-scene>
+</body>
+</html>
