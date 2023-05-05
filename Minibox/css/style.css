@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 2rem;
+    background: lightblue;
+}
+
+div{
+    background: black;
+    margin-left: 1rem;
+    margin-right: 134rem;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+    padding-top: 1.5rem;
+    border: 3px solid red;
+}
+
+h2{
+    font-size: 3rem;
+    font-family: sans-serif;
+    color: white;
+    margin-left: 2rem;
+}

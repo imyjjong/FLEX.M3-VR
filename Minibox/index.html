@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/aframe.min.js"></script>
+    <script defer src="js/script.js"></script>
+    <title>Minibox</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div>
+    <h2>Wood: <span id="js--wood">0</span></h2>
+    <h2>Stone: <span id="js--stone">0</span></h2>
+    </div>
+    <a-scene>
+        <a-camera>
+            <a-cursor color="black">
+                <a-box id="js--item--grabbed" width="0.5" height="0.5" depth="0.5" color="red" position="0.5 0 0"></a-box>
+                <a-entity  id="js--cursorcone" position="4.5 -2 -1" rotation="-15 0 0" height="3" visible="false">
+                    <a-box rotation="25 25 25" position="-2 0.5 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                    <a-box rotation="25 25 25" position="-2 0.8 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                    <a-box rotation="25 25 25" position="-2 1.1 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                    <a-box rotation="25 25 25" position="-2 1.4 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                    <a-box rotation="25 25 25" position="-2 1.7 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+        
+                    <a-box rotation="25 25 25" position="-2 2 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-2.2 2 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-2.4 1.9 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-2.6 1.8 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-2.7 1.7 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-2.77 1.62 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+        
+                    <a-box rotation="25 25 25" position="-1.8 2 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-1.6 1.9 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-1.4 1.75 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                    <a-box rotation="25 25 25" position="-1.3 1.65 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                  </a-entity>
+            </a-cursor>
+        </a-camera>
+        <a-box id="js--item" width="1" height="1" depth="2" color="red" position="0 1 -3"></a-box>
+        <a-sphere class="js--sphere" color="yellow" position="-2 -0.5 2"></a-sphere>
+        <a-sphere class="js--sphere" color="yellow" position="0 -0.5 2"></a-sphere>
+        <a-sphere class="js--sphere" color="yellow" position="2 -0.5 2"></a-sphere>
+
+        <a-box class="js--tree" position="7 0.5 -8" color="brown"></a-box>
+        <a-box class="js--tree" position="7 1.5 -8" color="brown"></a-box>
+        <a-box class="js--tree" position="7 2.5 -8" color="brown"></a-box>
+        <a-box class="js--tree" position="7 3.5 -8" color="brown"></a-box>
+        <a-box class="js--tree" position="7 4.5 -8" color="green"></a-box>
+        <a-box class="js--tree" position="7 4.5 -9" color="green"></a-box>
+        <a-box class="js--tree" position="7 4.5 -7" color="green"></a-box>
+        <a-box class="js--tree" position="7 5.5 -7.5" color="green"></a-box>
+        <a-box class="js--tree" position="7 5.5 -8.5" color="green"></a-box>
+        <a-box class="js--tree" position="7 6.5 -8" color="green"></a-box>
+
+        <a-box class="js--tree" position="-6 0.5 -7" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 1.5 -7" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 2.5 -7" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 3.5 -7" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 4.5 -7" color="green"></a-box>
+        <a-box class="js--tree" position="-6 4.5 -6" color="green"></a-box>
+        <a-box class="js--tree" position="-6 4.5 -8" color="green"></a-box>
+        <a-box class="js--tree" position="-6 5.5 -7.5" color="green"></a-box>
+        <a-box class="js--tree" position="-6 5.5 -6.5" color="green"></a-box>
+        <a-box class="js--tree" position="-6 6.5 -7" color="green"></a-box>
+
+        <a-box class="js--tree" position="-6 0.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 1.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 2.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 3.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 4.5 -2" color="green"></a-box>
+        <a-box class="js--tree" position="-6 4.5 -4" color="green"></a-box>
+        <a-box class="js--tree" position="-6 4.5 -3" color="green"></a-box>
+        <a-box class="js--tree" position="-6 5.5 -2.5" color="green"></a-box>
+        <a-box class="js--tree" position="-6 5.5 -3.5" color="green"></a-box>
+        <a-box class="js--tree" position="-6 6.5 -3" color="green"></a-box>
+
+        <a-box class="js--tree" position="-6 0.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 1.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 2.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 3.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="-6 4.5 2" color="green"></a-box>
+        <a-box class="js--tree" position="-6 4.5 4" color="green"></a-box>
+        <a-box class="js--tree" position="-6 4.5 3" color="green"></a-box>
+        <a-box class="js--tree" position="-6 5.5 2.5" color="green"></a-box>
+        <a-box class="js--tree" position="-6 5.5 3.5" color="green"></a-box>
+        <a-box class="js--tree" position="-6 6.5 3" color="green"></a-box>
+
+        <a-box class="js--tree" position="6 0.5 -4" color="brown"></a-box>
+        <a-box class="js--tree" position="6 1.5 -4" color="brown"></a-box>
+        <a-box class="js--tree" position="6 2.5 -4" color="brown"></a-box>
+        <a-box class="js--tree" position="6 3.5 -4" color="brown"></a-box>
+        <a-box class="js--tree" position="6 4.5 -3" color="green"></a-box>
+        <a-box class="js--tree" position="6 4.5 -5" color="green"></a-box>
+        <a-box class="js--tree" position="6 4.5 -4" color="green"></a-box>
+        <a-box class="js--tree" position="6 5.5 -3.5" color="green"></a-box>
+        <a-box class="js--tree" position="6 5.5 -4.5" color="green"></a-box>
+        <a-box class="js--tree" position="6 6.5 -4" color="green"></a-box>
+
+        <a-box class="js--tree" position="6 0.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="6 1.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="6 2.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="6 3.5 3" color="brown"></a-box>
+        <a-box class="js--tree" position="6 4.5 2" color="green"></a-box>
+        <a-box class="js--tree" position="6 4.5 4" color="green"></a-box>
+        <a-box class="js--tree" position="6 4.5 3" color="green"></a-box>
+        <a-box class="js--tree" position="6 5.5 2.5" color="green"></a-box>
+        <a-box class="js--tree" position="6 5.5 3.5" color="green"></a-box>
+        <a-box class="js--tree" position="6 6.5 3" color="green"></a-box>
+
+        <a-box class="js--tree" position="-9 0.5 2" color="brown"></a-box>
+        <a-box class="js--tree" position="-9 1.5 2" color="brown"></a-box>
+        <a-box class="js--tree" position="-9 2.5 2" color="brown"></a-box>
+        <a-box class="js--tree" position="-9 3.5 2" color="brown"></a-box>
+        <a-box class="js--tree" position="-9 4.5 3" color="green"></a-box>
+        <a-box class="js--tree" position="-9 4.5 2" color="green"></a-box>
+        <a-box class="js--tree" position="-9 4.5 1" color="green"></a-box>
+        <a-box class="js--tree" position="-9 5.5 2.5" color="green"></a-box>
+        <a-box class="js--tree" position="-9 5.5 1.5" color="green"></a-box>
+        <a-box class="js--tree" position="-9 6.5 2" color="green"></a-box>
+
+        <a-box class="js--tree" position="-7 0.5 -10" color="brown"></a-box>
+        <a-box class="js--tree" position="-7 1.5 -10" color="brown"></a-box>
+        <a-box class="js--tree" position="-7 2.5 -10" color="brown"></a-box>
+        <a-box class="js--tree" position="-7 3.5 -10" color="brown"></a-box>
+        <a-box class="js--tree" position="-7 4.5 -11" color="green"></a-box>
+        <a-box class="js--tree" position="-7 4.5 -10" color="green"></a-box>
+        <a-box class="js--tree" position="-7 4.5 -9" color="green"></a-box>
+        <a-box class="js--tree" position="-7 5.5 -9.5" color="green"></a-box>
+        <a-box class="js--tree" position="-7 5.5 -10.5" color="green"></a-box>
+        <a-box class="js--tree" position="-7 6.5 -10" color="green"></a-box>
+
+        <a-box class="js--tree" position="7 0.5 -12" color="brown"></a-box>
+        <a-box class="js--tree" position="7 1.5 -12" color="brown"></a-box>
+        <a-box class="js--tree" position="7 2.5 -12" color="brown"></a-box>
+        <a-box class="js--tree" position="7 3.5 -12" color="brown"></a-box>
+        <a-box class="js--tree" position="7 4.5 -12" color="green"></a-box>
+        <a-box class="js--tree" position="7 4.5 -11" color="green"></a-box>
+        <a-box class="js--tree" position="7 4.5 -13" color="green"></a-box>
+        <a-box class="js--tree" position="7 5.5 -12.5" color="green"></a-box>
+        <a-box class="js--tree" position="7 5.5 -11.5" color="green"></a-box>
+        <a-box class="js--tree" position="7 6.5 -12" color="green"></a-box>
+
+        <a-box class="js--tree" position="-8 0.5 -2" color="brown"></a-box>
+        <a-box class="js--tree" position="-8 1.5 -2" color="brown"></a-box>
+        <a-box class="js--tree" position="-8 2.5 -2" color="brown"></a-box>
+        <a-box class="js--tree" position="-8 3.5 -2" color="brown"></a-box>
+        <a-box class="js--tree" position="-8 4.5 -3" color="green"></a-box>
+        <a-box class="js--tree" position="-8 4.5 -1" color="green"></a-box>
+        <a-box class="js--tree" position="-8 4.5 -2" color="green"></a-box>
+        <a-box class="js--tree" position="-8 5.5 -2.5" color="green"></a-box>
+        <a-box class="js--tree" position="-8 5.5 -1.5" color="green"></a-box>
+        <a-box class="js--tree" position="-8 6.5 -2" color="green"></a-box>
+
+        <a-box class="js--tree" position="9 0.5 4" color="brown"></a-box>
+        <a-box class="js--tree" position="9 1.5 4" color="brown"></a-box>
+        <a-box class="js--tree" position="9 2.5 4" color="brown"></a-box>
+        <a-box class="js--tree" position="9 3.5 4" color="brown"></a-box>
+        <a-box class="js--tree" position="9 4.5 4" color="green"></a-box>
+        <a-box class="js--tree" position="9 4.5 5" color="green"></a-box>
+        <a-box class="js--tree" position="9 4.5 3" color="green"></a-box>
+        <a-box class="js--tree" position="9 5.5 4.5" color="green"></a-box>
+        <a-box class="js--tree" position="9 5.5 3.5" color="green"></a-box>
+        <a-box class="js--tree" position="9 6.5 4" color="green"></a-box>
+
+        <a-box class="js--tree" position="8 0.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="8 1.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="8 2.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="8 3.5 -3" color="brown"></a-box>
+        <a-box class="js--tree" position="8 4.5 -4" color="green"></a-box>
+        <a-box class="js--tree" position="8 4.5 -2" color="green"></a-box>
+        <a-box class="js--tree" position="8 4.5 -3" color="green"></a-box>
+        <a-box class="js--tree" position="8 5.5 -3.5" color="green"></a-box>
+        <a-box class="js--tree" position="8 5.5 -2.5" color="green"></a-box>
+        <a-box class="js--tree" position="8 6.5 -3" color="green"></a-box>
+
+        <a-entity  id="js--cone" position="2 1.5 -5" animation="property:position; dir:alternate; to:2 1.4 -5; dur:2500; loop:true;" >
+                <a-box rotation="25 25 25" position="-2 0.5 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                <a-box rotation="25 25 25" position="-2 0.8 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                <a-box rotation="25 25 25" position="-2 1.1 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                <a-box rotation="25 25 25" position="-2 1.4 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+                <a-box rotation="25 25 25" position="-2 1.7 0" width="0.3" height="0.3" depth="0.3" color="#462323"></a-box>
+    
+                <a-box rotation="25 25 25" position="-2 2 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-2.2 2 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-2.4 1.9 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-2.6 1.8 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-2.7 1.7 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-2.77 1.62 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+    
+                <a-box rotation="25 25 25" position="-1.8 2 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-1.6 1.9 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-1.4 1.75 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+                <a-box rotation="25 25 25" position="-1.3 1.65 0" width="0.3" height="0.3" depth="0.3" color="#41B995"></a-box>
+              </a-entity>
+
+<!-- voorste muur -->
+
+        <a-box class="js--castle" position="3 0.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 0.5 -10" color="#737373"></a-box>
+        <a-box class="js--tree" position="1 0.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--tree" position="0 0.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--tree" position="-1 0.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--castle" position="-2 0.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 0.5 -10" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 1.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 1.5 -10" color="#737373"></a-box>
+        <a-box class="js--tree" position="1 1.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--tree" position="0 1.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--tree" position="-1 1.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--castle" position="-2 1.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 1.5 -10" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 2.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 2.5 -10" color="#737373"></a-box>
+        <a-box class="js--tree" position="1 2.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--tree" position="0 2.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--tree" position="-1 2.5 -10" color="#460F0F"></a-box>
+        <a-box class="js--castle" position="-2 2.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 2.5 -10" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 3.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 3.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 3.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 3.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-1 3.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-2 3.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 3.5 -10" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 4.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 4.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 4.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 4.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-1 4.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-2 4.5 -10" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 4.5 -10" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 5.5 -10" color="#737373"></a-box>
+        <!-- <a-box class="js--castle"  position="2 5.5 -10" color="#737373"></a-box> -->
+        <a-box class="js--castle" position="1 5.5 -10" color="#737373"></a-box>
+        <!-- <a-box class="js--castle"  position="0 5.5 -10" color="#737373"></a-box> -->
+        <a-box  class="js--castle" position="-1 5.5 -10" color="#737373"></a-box>
+        <!-- <a-box  class="js--castle" position="-2 5.5 -10" color="#737373"></a-box> -->
+        <a-box  class="js--castle" position="-3 5.5 -10" color="#737373"></a-box>
+
+<!-- achterste muur -->
+
+        <a-box class="js--castle" position="3 0.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 0.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 0.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 0.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-1 0.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-2 0.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-3 0.5 -13" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 1.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 1.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 1.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 1.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-1 1.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-2 1.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-3 1.5 -13" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 2.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 2.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 2.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 2.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-1 2.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-2 2.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-3 2.5 -13" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 3.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 3.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 3.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 3.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-1 3.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-2 3.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-3 3.5 -13" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 4.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="2 4.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="1 4.5 -13" color="#737373"></a-box>
+        <a-box class="js--castle" position="0 4.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-1 4.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-2 4.5 -13" color="#737373"></a-box>
+        <a-box  class="js--castle" position="-3 4.5 -13" color="#737373"></a-box>
+
+        <a-box class="js--castle"  position="3 5.5 -13" color="#737373"></a-box>
+        <!-- <a-box class="js--castle"  position="2 5.5 -13" color="#737373"></a-box> -->
+        <a-box class="js--castle"  position="1 5.5 -13" color="#737373"></a-box>
+        <!-- <a-box class="js--castle"  position="0 5.5 -13" color="#737373"></a-box> -->
+        <a-box  class="js--castle" position="-1 5.5 -13" color="#737373"></a-box>
+        <!-- <a-box  class="js--castle" position="-2 5.5 -13" color="#737373"></a-box> -->
+        <a-box  class="js--castle" position="-3 5.5 -13" color="#737373"></a-box>
+
+<!-- zijkant muur 1 -->
+
+        <a-box class="js--castle" position="3 0.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 1.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 2.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 3.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 4.5 -12" color="#737373"></a-box>
+        <!-- <a-box class="js--castle"  position="3 5.5 -12" color="#737373"></a-box> -->
+        <a-box class="js--castle" position="3 5.5 -11.5" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="3 0.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 1.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 2.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 3.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="3 4.5 -11" color="#737373"></a-box>
+        <!-- <a-box class="js--castle"  position="3 5.5 -11" color="#737373"></a-box> -->
+
+<!-- zijkant muur 2 -->
+
+        <a-box class="js--castle" position="-3 0.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 1.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 2.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 3.5 -12" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 4.5 -12" color="#737373"></a-box>
+        <!-- <a-box  class="js--castle" position="-3 5.5 -12" color="#737373"></a-box> -->
+        <a-box class="js--castle" position="-3 5.5 -11.5" color="#737373"></a-box>
+
+        <a-box class="js--castle" position="-3 0.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 1.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 2.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 3.5 -11" color="#737373"></a-box>
+        <a-box class="js--castle" position="-3 4.5 -11" color="#737373"></a-box>
+        <!-- <a-box  class="js--castle" position="-3 5.5 -11" color="#737373"></a-box> -->
+
+        <a-plane rotation="-90 0 0" position="0 0 -5" width="20" height="20" color="green"></a-plane>
+
+        <a-box id="js--invisible--box" visible="false" color="red" width="1" height="1" depth="1"></a-box>
+    </a-scene>
+</body>
+</html>
